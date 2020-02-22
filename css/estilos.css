@@ -1,0 +1,75 @@
+/*GENERALES*/
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+h1 {
+    font-size: 38px;
+}
+h2 {
+    font-size: 34px;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 26px;
+}
+.gnral_navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+}
+.gnral_navegacion a:last-of-type {
+    /*Para eliminar el margin-right que afecta al último enlace*/
+    margin: 0;
+}
+.gnral_navegacion a:hover {
+    color: #71B100;
+}
+/*HEADER*/
+.header_site.inicio_principal {
+    /*Seleccionamos una imagen de fondo*/
+    background-image: url("../img/header.jpg");
+    /*Posicionamos la imagen desde el centro*/
+    background-position: center center;
+    /*Se ajusta la imagen para que tome las proporciones definidas*/
+    background-size: cover;
+    /*Tamaño de la imagen, vh (view port) detecta el tamaño de la pantalla
+    y toma esa altura*/
+    height: 100vh;
+    /*Adicional, le indicamos que debe tener un minimo de tamaño la imagen
+    por si se llega a tener una pantalla mas pequeña*/
+    min-height: 600px;
+}
+.header_contenedor {
+    max-width: 1200px;
+    /*0 para que no afecte arriba, ni abajo y auto tomar el espacio
+    de la izquierda y la derecha y ajustarlo de manera automatica*/
+    margin: 0 auto;
+}
+.header_vertical_contenedor {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-bottom: 0px;
+    line-height: 2;
+}
+.header_vertical_contenedor h1 {
+    color: #ffffff;
+}
+.header_barra {
+    /*Vuelve a los elementos flexibles*/
+    display: flex;
+    /*Definimos que ponga los elementos al incio y final del contenedor*/
+    justify-content: space-between;
+    /*Alineamos los elementos al centro*/
+    align-items: center;
+    /*Espacio hacia dentro del elemento*/
+    padding-top: 30px;
+}
