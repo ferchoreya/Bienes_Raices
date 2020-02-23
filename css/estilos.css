@@ -324,3 +324,20 @@ nos genere un elemento.
     font-weight: 300;
     text-align: justify;
 }
+
+/*****************
+****  FOOTER  ****
+******************/
+.footer_site {
+    margin-top: 20px;
+    background-color: #333333;
+}
+.footer_contenedor {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright {
+    margin: 0;
+    color: #ffffff;
+}
