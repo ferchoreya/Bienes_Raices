@@ -197,3 +197,40 @@ img {
     display: flex;
     justify-content: flex-end;
 }
+.anuncios_detalle_formato_iconos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.anuncios_detalle_formato_iconos li{
+    display: flex;
+}
+.anuncios_detalle_formato_iconos li img {
+    margin-right: 20px;
+}
+/***************************
+****  SECCION CONTACTO  ****
+****************************/
+.section_contacto_imagen {
+    background-image: url("../img/encuentra.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.section_contacto_contenido {
+    /*Factor de crecimiento, es decir, que flex detecta cuanto es el tamaño disponible
+    y lo divide entre el número de elementos (1) y el resultado será el tamaño que flex le 
+    asignará a los elementos*/
+    flex: 1;
+    color: #ffffff;
+}
+.section_contacto_contenido p {
+    font-size: 18px;
+}
+.boton_contacto {
+    display: inline-block;
+}
