@@ -1,6 +1,10 @@
 /*GENERALES*/
 html {
+    box-sizing: border-box;
     font-size: 16px;
+}
+*,*:before,*:after {
+    box-sizing: inherit;
 }
 body {
     font-family: 'Lato', sans-serif;
@@ -18,6 +22,10 @@ h3 {
 }
 h4 {
     font-size: 26px;
+}
+/*Ajustamos las imagenes al ancho del contenedor*/
+img {
+    max-width: 100%;
 }
 /**Para reutilizar a lo largo del sitio**/
 .fw-300 {
@@ -49,7 +57,62 @@ h4 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-/*HEADER*/
+.gnral_boton {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-top: 30px;
+    /*Los enlaces tienen por default display: inline por lo tanto no afecta
+    el ancho (width) que definamos, para poder aplicar el ancho definido, 
+    debemos cambiar a display: inline-block porque si solo utilizamos solo el
+    display:block,(Sin width) este tomara todo el ancho disponible.
+
+    Cabe mencionar que cuando usamos esta tecnica, el ancho del elemento es mayor
+    al width definido, es decir:
+    padding: 5px;
+    width: 15px;
+    El elemento tendra un ancho de 25 (5 + 15 + 5)
+    Por lo que debemos ocupar una tecnica para respetar el ancho sin que considere
+    el padding:
+    html {
+        box-sizing: border-box;
+    }
+    *,*:before,*:after {
+        box-sizing: inherit;
+    }
+    Despues de aplicar esto, 
+    padding: 5px;
+    width: 15px;
+    El elemento tendra un ancho de 15 ( width)
+    
+    Tambien las imagenes son por default, display:inline si deseamos cambiar su
+    ancho debemos cambiarlas a display:block o display:inline-block
+    
+    Mientas que h4,p,etc son display:block por lo tanto le podemos definir un acho*/
+    display: inline-block;
+    text-align: center;
+}
+.gnral_boton_amarillo {
+    background-color: #E08709;
+    display: block; 
+    /*Se cambio en la practica por la siguiente regla antes de la regla .gnral_boton
+    .d-block {
+        display:block;!important --> Para que tome este estilo y omita los siguientes
+    }
+    y en el HTML se agrega la clase
+    <a href="anuncio.html" class="gnral_boton gnral_boton_amarillo D-BLOCK">Ver Propiedad</a>
+        */
+
+}
+.gnral_boton_verde {
+    background-color: #71B100;
+}
+
+/*****************
+****  HEADER  ****
+*****************/
 .header_site.inicio_principal {
     /*Seleccionamos una imagen de fondo*/
     background-image: url("../img/header.jpg");
@@ -106,4 +169,31 @@ h4 {
     /*Para poner el texto en MAYUSCULAS*/
     text-transform: uppercase;
 }
+/**********************************
+****  SECCION MAIN - ANUNCIOS  ****
+***********************************/
+.main_contenedor_anuncios {/*contenedor-anuncios*/
+    display: flex;
+    justify-content: space-between;
+}
+.main_contenedor_anuncios_detalle {/*anuncio*/
+    flex-basis: calc(33.3% - 10px);
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+}
+.anuncios_detalle_formato {/*contenido-anuncio*/
+    padding: 20px;
+}
 
+.anuncios_detalle_formato h3, .anuncios_detalle_formato p {
+    /*Eliminamos el estilo que aplica por default el navegador*/
+    margin: 0;
+}
+.anuncios_detalle_formato_precio {/*precio*/
+    color: #71B100;
+    font-weight: 700;
+}
+.main_boton_derecha {
+    display: flex;
+    justify-content: flex-end;
+}
