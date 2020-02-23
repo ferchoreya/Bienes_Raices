@@ -248,6 +248,7 @@ img {
 .section_blog_testimonios .section_testimoniales {
     flex-basis: calc(40% - 20px);
 }
+/** BLOG **/
 .section_blog_entradaBlog {
     display: flex;
     justify-content: space-between;
@@ -284,4 +285,42 @@ nos genere un elemento.
 
 .section_blog_entradaBlog_Texto span {
     color: #E08709;
+}
+/**TESTIMONIALES**/
+.section_testimoniales_testimonio {
+    background-color: #71B100;
+    font-size: 24px;
+    padding: 20px;
+    color: #ffffff;
+    border-radius: 20px;
+}
+.section_testimoniales_testimonio p {
+    text-align: right;
+}
+/*Pseudo elemento. Vamos a indicarle que antes(::before) del elemento (blockquote) 
+nos genere un elemento.
+*/
+.section_testimoniales_testimonio blockquote::before {
+    content: '';
+    background-image: url("../img/comilla.svg");
+    background-position: center center;
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    display: block;
+    /*Este seria el hijo, el padre debe tener position: relative*/
+    position: absolute;
+    left: -20px;
+    top: -15px;
+}
+.section_testimoniales_testimonio blockquote {
+    /*El padre debe tener una posición RELATIVA donde se le indica al navegador en
+    que coordenadas se encuentra el elemento, para que los hijos con
+    posicion ABSOLUTA puedan acceder a los atributos (top,left,bottom,right) 
+    permitiendo posicionar un elemento en un lugar especifico.
+    */
+    position: relative;
+    padding-left: 50px;
+    font-weight: 300;
+    text-align: justify;
 }
