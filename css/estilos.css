@@ -234,3 +234,54 @@ img {
 .boton_contacto {
     display: inline-block;
 }
+
+/***************************************
+****  SECCION BLOG Y TESTIMONIALES  ****
+****************************************/
+.section_blog_testimonios {
+    display: flex;
+    justify-content: space-between;
+}
+.section_blog_testimonios .section_blog {
+    flex-basis: 60%;
+}
+.section_blog_testimonios .section_testimoniales {
+    flex-basis: calc(40% - 20px);
+}
+.section_blog_entradaBlog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.section_blog_entradaBlog:last-of-type {
+    margin-bottom: 0;
+}
+.section_blog_entradaBlog .section_blog_entradaBlog_imagen {
+    flex-basis: 40%;
+}
+.section_blog_entradaBlog .section_blog_entradaBlog_Texto {
+    flex-basis: calc(60% - 30px);
+}
+.section_blog_entradaBlog_Texto h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.section_blog_entradaBlog_Texto a{
+    color: #000000;
+    text-decoration: none;
+}
+/*Pseudo elemento. Vamos a indicarle que despues(::after) del elemento (h4) 
+nos genere un elemento.
+*/
+.section_blog_entradaBlog_Texto h4::after {
+    content: '';/*Para que no muestre ningun texto*/
+    display: block;/*No hay definido ningun bloque, por lo tanto lo definimos*/
+    width: 150px;
+    height: 5px;
+    background-color: #71B100;
+    margin-top: 10px;
+}
+
+.section_blog_entradaBlog_Texto span {
+    color: #E08709;
+}
