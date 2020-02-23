@@ -113,6 +113,10 @@ img {
 /*****************
 ****  HEADER  ****
 *****************/
+.header_site {
+    background-color: #333333;
+    padding: 10px 0 30px 0;
+}
 .header_site.inicio_principal {
     /*Seleccionamos una imagen de fondo*/
     background-image: url("../img/header.jpg");
@@ -340,4 +344,23 @@ nos genere un elemento.
 .copyright {
     margin: 0;
     color: #ffffff;
+}
+/***********************************************
+************************************************
+***********    SECCIONES INTERNAS    ***********
+************************************************
+************************************************/
+.main_contenido_nosotros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+}
+.main_contenido_texto blockquote {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 0;
+    padding: 10px 0 30px 0;
+}
+.main_contenido_texto p {
+    text-align: justify;
 }
