@@ -57,6 +57,10 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.gnral_contenido_centrado {
+    max-width: 800px;
+    text-align: justify;
+}
 .gnral_boton {
     color: #ffffff;
     font-weight: 700;
@@ -350,6 +354,9 @@ nos genere un elemento.
 ***********    SECCIONES INTERNAS    ***********
 ************************************************
 ************************************************/
+/*************
+** NOSOTROS **
+**************/
 .main_contenido_nosotros {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -363,4 +370,50 @@ nos genere un elemento.
 }
 .main_contenido_texto p {
     text-align: justify;
+}
+/*************
+** ANUNCIOS **
+**************/
+.main_contenedor_anuncios_html {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;/*Los elementos son colocados en varias lineas*/
+}
+.main_contenedor_anuncios_html_detalle {
+    margin-bottom: 20px;
+    flex-grow: 0;/*Indica el factor de crecimiento de un elemento, 0 para que no crezca*/
+    flex-shrink: 0;/*Indica el factor de reducción de un elemento, 0 para que no se encoja y tome el tamaño de la base (flex-basis)*/
+    flex-basis: calc(33.3% - 10px);/*Especifica el tamaño inicial del elemento flexible*/
+    /*TIP:
+    Todo lo anterior se puede resumir en el atajo:
+    flex: 0 0 calc(33.3% - 10px); --> flex: grow shrink basis*/
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+}
+
+/************************
+** ANUNCIO / DESTACADO **
+*************************/
+.main_anuncio_resumen_propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_anuncio_precio {
+    color: #71B100;
+    font-weight: 700;
+}
+.anuncio_detalle_formato_iconos {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 500px;
+    flex: 1;
+}
+.anuncio_detalle_formato_iconos li{
+    display: flex;
+}
+.anuncio_detalle_formato_iconos li img {
+    margin-right: 20px;
 }
