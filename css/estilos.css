@@ -421,3 +421,65 @@ nos genere un elemento.
 /*********
 ** BLOG **
 **********/
+
+/*************
+** CONTACTO **
+**************/
+.contacto_formulario p {
+    font-size: 14px;
+    color: 4F4F4F;
+    margin: 20px 0 0 0;
+}
+label {
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+legend {
+    font-size: 20px;
+    color: #4F4F4F;
+}
+/** Podemos aplicar estilos por cada tipo
+input[type="text"],
+input[type="email"],
+input[type="tel"]
+
+o podemos decirle que aplique a todos menos a uno en 
+especifico, en este caso, submit */
+input:not([type="submit"]), 
+textarea, 
+select
+ {
+    padding: 10px;
+    display: block;
+    width: 100%;
+    background-color: #E1E1E1;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+}
+/*En caso de que el navegador no afecte el elemento SELECT
+podemos incluir
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+*/
+input[type="radio"] {
+    /*Auto, indica que el navegador solo debe tomar el ancho necesario para el elemento*/
+    width: auto;
+    margin: 0;
+}
+textarea {
+    height: 200px;
+}
+.contacto_formulario_formaComunicacion {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.boton_submit {
+    border: none;
+    cursor: pointer;
+}
